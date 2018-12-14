@@ -1,0 +1,26 @@
+# Site settings
+name: 内蒙草原的个人的博客
+email: qymmdj1211@163.com
+author: qianym
+url: http://www.hifreud.com
+resume_site: http://www.hifreud.com/Resume.io/
+github: https://qymmdj.github.io/
+baseurl: "/qymmdj.github.io"
+description: Actually, less is more!
+meta_description: 取于互联网，给予互联网
+motto: It's our wits that make us men.
+banner: 为者常成，行者常至。
+
+
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+#exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: qymmdj
+
+# Build settings
+markdown: kramdown
+
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
+
