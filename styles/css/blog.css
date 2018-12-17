@@ -14,9 +14,9 @@
     font-size:20px;
 }
 
-.list-group-item .nb
+.nb
 {
     border-left:0px;
     border-right:0px;
-    list-style: circle;
+    list-style:disc;
 }
