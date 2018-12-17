@@ -10,11 +10,7 @@
 {
     text-align: center;
     border-bottom: 1px solid #337ab7;
-    font-size:2em;margin-top:1.5em;
+    font-family: Georgia, serif
 
 }
 
-.year:first-letter
-{
-    font-size:200%;
-}
