@@ -12,6 +12,11 @@
     border-bottom: 1px solid #337ab7;
     font-family: Georgia, serif;
     font-size:20px;
-
 }
 
+.list-group-item .nb
+{
+    border-left:0px;
+    border-right:0px;
+    list-style: circle;
+}
