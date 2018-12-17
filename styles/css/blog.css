@@ -16,7 +16,7 @@
 
 .nb
 {
-    border-left:0px;
-    border-right:0px;
+    border-left:0px solid #ddd;
+    border-right:0px solid #ddd;
     list-style:disc;
 }
