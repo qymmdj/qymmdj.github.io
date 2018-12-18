@@ -28,7 +28,7 @@ header: Posts By Category
 			  </a>
 
 			  {% for category in site.categories %}
-			  <a href="#{{ category }}-ref" class="list-group-item">{{category[0]}}<span class="badge">{{ site.categories[category].size }}</span></a>
+			  <a href="#{{ category[0] }}-ref" class="list-group-item">{{category[0]}}<span class="badge">{{ site.categories[category].size }}</span></a>
 			  {% endfor %}
 		  </div>
 	  </div>
