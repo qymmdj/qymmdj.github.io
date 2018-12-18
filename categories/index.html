@@ -9,7 +9,10 @@ header: Posts By Category
     <div class="col-md-3">
       <div class="sidebar hidden-print well hidden-xs" role="complementary">
         <div id="navigation">
-        	<h1>目录</h1>
+			<ol class="breadcrumb">
+				<li>分类</li>
+				<li><a href="{{ site.baseurl }}/categories/">文章分类</a></li>
+			</ol>
       		<ul class="nav sidenav">
 				{% if site.categories.first[0] == null %}
 					{% for category in site.categories %} 
