@@ -10,7 +10,7 @@ banner: 为者常成，行者常至。
 # be the project name.
 # *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
 #     run it like so: jekyll serve --baseurl=''
-baseurl: "/qymmdj.github.io"
+#baseurl: ""
 
 # This can be '' to hide the Github nav button
 github: ''
