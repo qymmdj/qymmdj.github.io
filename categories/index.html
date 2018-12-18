@@ -26,11 +26,10 @@ header: Posts By Category
 			  <a href="#" class="list-group-item active">
 				  {{ page.title }}
 			  </a>
-			  {% if site.categories.first[0] == null %}
+
 			  {% for category in site.categories %}
 			  <a href="#{{ category }}-ref" class="list-group-item">{{category[0]}}<span class="badge">{{ site.categories[category].size }}</span></a>
 			  {% endfor %}
-			  {% endif %}
 		  </div>
 	  </div>
   </div>
