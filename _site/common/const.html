@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/docs.css" rel="stylesheet" type="text/css">
+    <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+    <link href="http://10.10.21.150:8988/css/all-normal.css" rel="stylesheet" type="text/css">
+    <link href="/css/theme.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/docs.min.js"></script>
+</head>
+
+<body>
+<header id="top">
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="/images/logo.png" height="50"/>
+                <a class="navbar-brand" href="/">Primus</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/article">随笔</a></li>
+                    <li class="active"><a href="/common/const.html">通用功能</a></li>
+                    <li class="active"><a href="/ui/typeface.html">UI库</a></li>
+                    <li class="active"><a href="/gulp/install.html">Gulp</a></li>
+                    <li class="active"><a href="/record/record.html">经验谈</a></li>
+                    <li class="active"><a href="/works/css3.html">作品堂</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 hidden-xs">
+            <div class="sidebar well">
+    
+        <h1>通用组件</h1>
+<ul>
+    <li><a href="/common/const.html">常量</a></li>
+    <li><a href="/common/cookie.html">Cookie</a></li>
+    <li><a href="/common/dom.html">DOM</a></li>
+    <li><a href="/common/echo.html">图片懒加载</a></li>
+    <li><a href="/common/is.html">判断方法</a></li>
+    <li><a href="/common/jsbridge.html">JSBridge</a></li>
+    <li><a href="/common/selector.html">选择器</a></li>
+    <li><a href="/common/share.html">分享</a></li>
+    <li><a href="/common/storage.html">缓存</a></li>
+    <li><a href="/common/url.html">URL地址</a></li>
+    <li><a href="/common/util.html">工具</a></li>
+</ul>
+    
+</div>
+        </div>
+        <div class="col-md-8">
+            <div class="well">
+                <h1 class="none"><a href="const.html">常量（const.js）</a></h1>
+                <p>常量类中包括普通常量（const）、正则常量（regex）。</p>
+
+<h1 id="const">一、普通常量（const）</h1>
+<p>普通常量中包括cookie、menu、分享回调中设置的TO、JSBridge等常量。</p>
+
+<h5 id="to"><strong>1）分享回调中设置的TO</strong></h5>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">common</span><span class="p">.</span><span class="kr">const</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">TO_WX_F</span><span class="p">:</span> <span class="s1">'wxMessage'</span><span class="p">,</span>
+  <span class="na">TO_WX_T</span><span class="p">:</span> <span class="s1">'wxTimeline'</span><span class="p">,</span>
+  <span class="na">TO_CL_F</span><span class="p">:</span> <span class="s1">'clMessage'</span><span class="p">,</span>
+  <span class="na">TO_QQ</span><span class="p">:</span> <span class="s1">'qq'</span><span class="p">,</span>
+  <span class="na">TO_SINA</span><span class="p">:</span> <span class="s1">'sina'</span><span class="p">,</span>
+  <span class="na">TO_SMS</span><span class="p">:</span> <span class="s1">'sms'</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+<h1 id="regex">二、正则常量（regex）</h1>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">common</span><span class="p">.</span><span class="nx">regex</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">mobile</span><span class="p">:</span> <span class="sr">/^1</span><span class="se">[</span><span class="sr">0-9</span><span class="se">]{10}</span><span class="sr">$/</span><span class="p">,</span> <span class="c1">//手机号码</span>
+  <span class="na">chinese</span><span class="p">:</span> <span class="sr">/^</span><span class="se">[\u</span><span class="sr">4E00-</span><span class="se">\u</span><span class="sr">9FA5</span><span class="se">]</span><span class="sr">+$/</span><span class="p">,</span> <span class="c1">//全部是中文</span>
+  <span class="na">card</span><span class="p">:</span> <span class="sr">/</span><span class="se">(</span><span class="sr">^</span><span class="se">\d{15}</span><span class="sr">$</span><span class="se">)</span><span class="sr">|</span><span class="se">(</span><span class="sr">^</span><span class="se">\d{18}</span><span class="sr">$</span><span class="se">)</span><span class="sr">|</span><span class="se">(</span><span class="sr">^</span><span class="se">\d{17}(\d</span><span class="sr">|X</span><span class="se">)</span><span class="sr">$</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span> <span class="c1">//简单的身份证</span>
+  <span class="na">email</span><span class="p">:</span> <span class="sr">/^</span><span class="se">[</span><span class="sr">a-zA-Z0-9.!#$%&amp;'*+</span><span class="se">\/</span><span class="sr">=?^_`{|}~-</span><span class="se">]</span><span class="sr">+@</span><span class="se">[</span><span class="sr">a-zA-Z0-9</span><span class="se">](?:[</span><span class="sr">a-zA-Z0-9-</span><span class="se">]{0,61}[</span><span class="sr">a-zA-Z0-9</span><span class="se">])?(?:\.[</span><span class="sr">a-zA-Z0-9</span><span class="se">](?:[</span><span class="sr">a-zA-Z0-9-</span><span class="se">]{0,61}[</span><span class="sr">a-zA-Z0-9</span><span class="se">])?)</span><span class="sr">*$/</span><span class="p">,</span> <span class="c1">//邮箱</span>
+  <span class="na">digits</span><span class="p">:</span> <span class="sr">/^</span><span class="se">\d</span><span class="sr">+$/</span> <span class="c1">//整数</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+    <ul class="nav bs-docs-sidenav">
+        
+        
+        <li class="active">
+            
+            <a href="#const">普通常量</a>
+            
+            <ul class="nav">
+                
+                <li><a href="#cookie">cookie</a></li>
+                
+                <li><a href="#menu">menu</a></li>
+                
+                <li><a href="#to">分享回调中设置的TO</a></li>
+                
+                <li><a href="#jsbridge">JSBridge</a></li>
+                
+            </ul>
+            
+        </li>
+        
+        
+        <li>
+            
+            <a href="#regex">正则常量</a>
+            
+        </li>
+        
+    </ul>
+    <a href="#top" class="back-to-top">返回顶部</a>
+</nav>
+        </div>
+    </div>
+</div>
+
+<footer class="footer navbar-inverse navbar-fixed-bottom">
+    <p class="copyright">&copy;2016 上海易点时空网络有限公司 沪ICP备12046769号-2</p>
+</footer>
+
+</body>
+</html>
+
