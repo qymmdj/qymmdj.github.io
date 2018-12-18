@@ -1,36 +1,11 @@
 ---
 layout: default
-title: 分类
+title: 文章分类
 header: Posts By Category
 ---
 
 <div class="container docs-container">
   <div class="row">
-    <div class="col-md-3">
-      <div class="sidebar hidden-print well hidden-xs" role="complementary">
-        <div id="navigation">
-			<ol class="breadcrumb">
-				<li>分类</li>
-				<li><a href="{{ site.baseurl }}/categories/">文章分类</a></li>
-			</ol>
-      		<ul class="nav sidenav">
-				{% if site.categories.first[0] == null %}
-					{% for category in site.categories %} 
-				    	<li><a href="#{{ category }}-ref">
-				    		{{ category | join: "/" }} <span style="color: #999999;" >({{ site.categories[category].size }})</span>
-				    	</a></li>
-			    	{% endfor %}
-			  	{% else %}
-			    	{% for category in site.categories %} 
-				    	<li><a href="#{{ category[0] }}-ref">
-				    		{{ category[0] | join: "/" }} <span style="color: #999999;" >({{ category[1].size }})</span>
-				    	</a></li>
-			    	{% endfor %}
-			  	{% endif %}
-          	</ul>
-        </div>
-      </div>
-    </div>
     <div class="col-md-9" role="main">
       <div class="panel docs-content well">
         <div class="wrapper">
@@ -46,5 +21,17 @@ header: Posts By Category
         </div>
       </div>
     </div>
+	  <div class="col-md-3">
+		  <div class="list-group">
+			  <a href="#" class="list-group-item active">
+				  {{ page.title }}
+			  </a>
+			  {% if site.categories.first[0] == null %}
+			  {% for category in site.categories %}
+			  <a href="#{{ category }}-ref" class="list-group-item">{{category[0]}}<span class="badge">{{ site.categories[category].size }}</span></a>
+			  {% endfor %}
+			  {% endif %}
+		  </div>
+	  </div>
   </div>
 </div>
