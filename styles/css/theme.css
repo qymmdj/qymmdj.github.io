@@ -1,10 +1,10 @@
 body {
-    font-family: 微软雅黑, 'Open Sans', sans-serif;
+"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 @font-face {
     font-family: "iconfont";
-    src: url(../font/iconfont.ttf) format("truetype");
+    src: url(fontawesome/font/fontawesome-webfont.ttf) format("truetype");
 }
 
 ul {
