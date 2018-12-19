@@ -368,6 +368,13 @@ div[class^=ui-badge-]{
 
 
 .article{
-    border-left-color: #ce4844;
+}
 
+.article > h1{
+    color: #aa6708;
+    font-size: 1.4em;
+    margin: 30px 0 10px;
+    background: #fcf8e3;
+    padding: 10px 5px;
+    text-shadow: 1px 1px #000 ;
 }
