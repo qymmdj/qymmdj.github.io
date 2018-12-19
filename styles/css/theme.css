@@ -397,6 +397,7 @@ div[class^=ui-badge-]{
     font-weight: bold;
     color: #aa6708;
     text-align:center;
+    margin-top:10px;
 }
 
 #navigation h1{
