@@ -2,10 +2,6 @@ body {
 "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-@font-face {
-    font-family: "iconfont";
-    src: url(fontawesome/font/fontawesome-webfont.ttf) format("truetype");
-}
 
 ul {
     list-style: none;
@@ -371,7 +367,7 @@ div[class^=ui-badge-]{
 }
 
 .article > h1{
-    color: #aa6708;
+    color: #428bca;
     font-size: 1.4em;
     margin: 30px 0 10px;
     background: #fcf8e3;
