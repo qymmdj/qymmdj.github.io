@@ -414,6 +414,6 @@ div[class^=ui-badge-]{
     text-shadow: 1px 1px #000 ;
 }
 
-.nextpage{
+.nextpage ,.busuanzi{
     float: right;
 }
