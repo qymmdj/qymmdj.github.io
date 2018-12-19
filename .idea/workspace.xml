@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8c220e7-5f1b-48e8-978d-adc6c5c77924" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/index.html" afterPath="$PROJECT_DIR$/categories/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/css/theme.css" afterPath="$PROJECT_DIR$/styles/css/theme.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/categories/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+            <state relative-caret-position="178">
+              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -37,8 +39,18 @@
       <file leaf-file-name="theme.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/css/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="5" />
+            <state relative-caret-position="375">
+              <caret line="371" column="0" lean-forward="false" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docs.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/css/docs.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="909" column="11" lean-forward="false" selection-start-line="909" selection-start-column="0" selection-end-line="909" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -115,6 +127,10 @@
       <find>jekyll</find>
       <find>footer</find>
       <find>well</find>
+      <find>docs-content</find>
+      <find>article</find>
+      <find>border-left-color</find>
+      <find>.bs-callout</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,6 +158,7 @@
         <option value="$PROJECT_DIR$/_includes/docs_header.html" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
         <option value="$PROJECT_DIR$/styles/css/docs.css" />
+        <option value="$PROJECT_DIR$/styles/css/theme.css" />
         <option value="$PROJECT_DIR$/categories/index.html" />
       </list>
     </option>
@@ -378,12 +395,12 @@
       <workItem from="1545007149790" duration="511000" />
       <workItem from="1545015476070" duration="14778000" />
       <workItem from="1545093826179" duration="10098000" />
-      <workItem from="1545179986411" duration="2596000" />
+      <workItem from="1545179986411" duration="3305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56226000" />
+    <option name="totallyTimeSpent" value="56935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="2" width="1377" height="733" extended-state="0" />
@@ -458,14 +475,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/pagination.html" />
     <entry file="file://$PROJECT_DIR$/_layouts/article.html" />
     <entry file="file://$PROJECT_DIR$/article/index.html" />
@@ -533,6 +542,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="97" lean-forward="false" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="97" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -571,6 +581,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -598,26 +609,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/css/docs.css">
+    <entry file="file://$PROJECT_DIR$/styles/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="1311" column="22" lean-forward="false" selection-start-line="1311" selection-start-column="18" selection-end-line="1311" selection-end-column="22" />
+        <state relative-caret-position="105">
+          <caret line="4" column="168" lean-forward="false" selection-start-line="4" selection-start-column="161" selection-end-line="4" selection-end-column="168" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/css/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="5" />
+        <state relative-caret-position="375">
+          <caret line="371" column="0" lean-forward="false" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/css/docs.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="909" column="11" lean-forward="false" selection-start-line="909" selection-start-column="0" selection-end-line="909" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/categories/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="178">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>

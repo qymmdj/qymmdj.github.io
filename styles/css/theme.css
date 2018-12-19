@@ -365,3 +365,9 @@ div[class^=ui-badge-]{
 .works > div:nth-of-type(3n) {
     margin-right: 0;
 }
+
+
+.article{
+    border-left-color: #ce4844;
+
+}
