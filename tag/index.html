@@ -11,7 +11,7 @@ header: Posts By Tag
 				{% for tag in site.tags %}
 				<h1 id="{{ tag[0] }}-ref">{{ tag[0] | join: "/" }}</h1>
 				{% for pages_list in tag.last %}
-				<div class="bs-callout bs-callout-danger">
+				<div class="bs-callout bs-callout-info">
 					<div class="article-desc">
 						<h4 ><a href="{{ pages_list.baseurl}}{{ pages_list.url }}">{{ pages_list.title }} <span class="year"> {{ pages_list.date | date: "（%Y.%m.%d）" }}</span></a></h4>
 						<p class="excerpt">{{ pages_list.excerpt | strip_html }}</p>
