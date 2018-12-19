@@ -16,7 +16,7 @@ header: Posts By Category
 				  {% for pages_list in category.last %}
 				  <div class="article">
 					  <div class="well">
-						  <h1 class="none"><a href="{{ pages_list.baseurl}}{{ pages_list.url }}">{{ pages_list.title }} {{ pages_list.date | date: "（%Y年%m月%d日）" }}</a></h1>
+						  <h2 class="none"><a href="{{ pages_list.baseurl}}{{ pages_list.url }}">{{ pages_list.title }} {{ pages_list.date | date: "（%Y年%m月%d日）" }}</a></h2>
 						  <div class="content">{{ pages_list.excerpt | strip_html }}</div>
 					  </div>
 				  </div>

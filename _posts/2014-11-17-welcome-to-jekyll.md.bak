@@ -5,9 +5,6 @@ date:   2014-11-17 13:31:01 +0800
 categories: jekyll
 tag: jekyll
 ---
-<!--excerpt-->
-本文会讲解怎样创建文章摘要功能并在首页显示出来。
-<!--excerpt-->
 
 * content
 {:toc}
