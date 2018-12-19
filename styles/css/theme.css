@@ -1,6 +1,6 @@
 body {
 "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size:16px;
+    font-size:18px;
 }
 
 
@@ -376,6 +376,12 @@ div[class^=ui-badge-]{
     text-shadow: 1px 1px #000 ;
 }
 
+.breadcrumb{
+    color: #aa6708;
+    text-shadow: 1px 1px #000 ;
+}
+
+
 .article .excerpt
 {
     color:#767676;
@@ -384,5 +390,7 @@ div[class^=ui-badge-]{
 {
     font-family: Georgia, serif;
     color:gray;
-    font-style: 16px;
+    font-size: 16px;
 }
+
+
