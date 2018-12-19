@@ -1,45 +1,36 @@
 ---
 layout: default
-title: Tags
+title: 标签
 header: Posts By Tag
 ---
 
 <div class="container docs-container">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="sidebar hidden-print" role="complementary">
-        <div id="navigation">
-        	<h1>目录</h1>
-      		<ul class="nav sidenav">
-			  	{% if site.tags.first[0] == null %}
-				  	{% for tag in site.tags %} 
-				  	<li><a href="{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span >({{ site.tags[tag].size }})</span></a></li>
-				  	{% endfor %}
-				{% else %}
-				  	{% for tag in site.tags %} 
-				  	<li><a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span style="color: #999999;" >({{ tag[1].size }})</span></a></li>
-				  	{% endfor %}
-				{% endif %}
-          	</ul>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-9" role="main">
-      <div class="panel docs-content">
-        <div class="wrapper">
-          <div class="home">
+	<div class="row">
+		<div class="col-md-9" role="main">
+			<div class="docs-content article">
+				{% for tag in site.tags %}
+				<h1 id="{{ tag[0] }}-ref">{{ tag[0] | join: "/" }}</h1>
+				{% for pages_list in tag.last %}
+				<div class="bs-callout bs-callout-danger">
+					<div class="article-desc">
+						<h4 ><a href="{{ pages_list.baseurl}}{{ pages_list.url }}">{{ pages_list.title }} <span class="year"> {{ pages_list.date | date: "（%Y.%m.%d）" }}</span></a></h4>
+						<p class="excerpt">{{ pages_list.excerpt | strip_html }}</p>
+					</div>
+				</div>
+				{% endfor %}
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="list-group hidden-xs">
+				<a href="#" class="list-group-item active">
+					{{ page.title }}
+				</a>
 
-          	{% for tag in site.tags %} 
-			  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
-			  <ul>
-			    {% assign pages_list = tag[1] %}  
-			    {% include LessOrMore/pages_list %}
-			  </ul>
-			{% endfor %}
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+				{% for tag in site.tags %}
+				<a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref" class="list-group-item">{{tag[0]}}<span class="badge">{{  tag[1].size}}</span></a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </div>
