@@ -407,5 +407,5 @@ div[class^=ui-badge-]{
 }
 
 .nextpage{
-    text-align: right;
+    float: right;
 }
