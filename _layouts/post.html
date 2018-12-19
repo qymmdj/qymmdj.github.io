@@ -21,7 +21,15 @@ layout: default
 
         <div class="end">（完）</div>
 
-        <div ><a href="">上一篇:{{ page.previous.title }}</a> <a href="">下一篇:{{ page.next.title }}</a></div>
+        <div class="nextpage">
+          {% if page.previous.title != null %}
+          上一篇:<a href="">{{ page.previous.title }}</a>
+          {% endif %}
+
+          {% if page.next.title != null %}
+            <a href="">下一篇:{{ page.next.title }}</a>
+          {% endif %}
+        </div>
 
       </div>
     </div>

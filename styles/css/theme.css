@@ -405,3 +405,7 @@ div[class^=ui-badge-]{
     padding: 10px 5px;
     text-shadow: 1px 1px #000 ;
 }
+
+.nextpage:last-child{
+    text-align: right;
+}
