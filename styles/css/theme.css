@@ -376,7 +376,7 @@ div[class^=ui-badge-]{
     text-shadow: 1px 1px #000 ;
 }
 
-.breadcrumb{
+.breadcrumb a{
     color: #aa6708;
     text-shadow: 1px 1px #000 ;
 }
