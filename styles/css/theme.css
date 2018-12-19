@@ -376,6 +376,11 @@ div[class^=ui-badge-]{
     text-shadow: 1px 1px #000 ;
 }
 
+.article .info > h1{
+    color: #428bca;
+    background: #aafcf4;
+}
+
 .nav-bar a{
     color: #aa6708;
     text-shadow: 1px 1px #000 ;

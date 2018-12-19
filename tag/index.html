@@ -7,7 +7,7 @@ header: Posts By Tag
 <div class="container docs-container">
 	<div class="row">
 		<div class="col-md-9" role="main">
-			<div class="docs-content article">
+			<div class="docs-content article info">
 				{% for tag in site.tags %}
 				<h1 id="{{ tag[0] }}-ref">{{ tag[0] | join: "/" }}</h1>
 				{% for pages_list in tag.last %}
