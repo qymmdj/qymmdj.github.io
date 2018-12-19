@@ -13,7 +13,7 @@ header: Posts By Category
 		 	 {% for pages_list in category.last %}
 				<div class="bs-callout bs-callout-danger">
 					<div class="article-desc">
-						<h4 ><a href="{{ pages_list.baseurl}}{{ pages_list.url }}">{{ pages_list.title }} {{ pages_list.date | date: "（%Y年%m月%d日）" }}</a></h4>
+						<h4 ><a href="{{ pages_list.baseurl}}{{ pages_list.url }}">{{ pages_list.title }} <span class="year"> {{ pages_list.date | date: "（%Y.%m.%d）" }}</span></a></h4>
 						<p class="excerpt">{{ pages_list.excerpt | strip_html }}</p>
 					</div>
 				</div>

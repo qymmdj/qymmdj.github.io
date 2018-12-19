@@ -379,3 +379,7 @@ div[class^=ui-badge-]{
 {
     color:#767676;
 }
+.article h4 .year
+{
+    font-family: Georgia, serif;
+}
