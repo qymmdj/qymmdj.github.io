@@ -392,5 +392,8 @@ div[class^=ui-badge-]{
     color:gray;
     font-size: 16px;
 }
-
-
+.end{
+    font-size:20px;
+    font-weight: bold;
+    color: #aa6708;
+}
