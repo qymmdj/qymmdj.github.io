@@ -399,6 +399,10 @@ div[class^=ui-badge-]{
     color:gray;
     font-size: 16px;
 }
+
+.bs-callout-danger h4{
+    color:#ce4844;
+}
 .end{
     font-size:20px;
     font-weight: bold;
