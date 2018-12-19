@@ -9,11 +9,11 @@ header: Posts By Category
     <div class="col-md-9" role="main">
       <div class="panel docs-content">
         <div class="wrapper">
-          <div class="home">
+          <div class="home well">
 			{% for category in site.categories %} 
 			  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
 			  <ul>
-				  {% for pages_list in category %}
+				  {% for pages_list in category.last %}
 				  <div class="article">
 					  <div class="well">
 						  <h1 class="none"><a href="{{ pages_list.baseurl}}{{ pages_list.url }}">{{ pages_list.title }} {{ pages_list.date | date: "（%Y年%m月%d日）" }}</a></h1>
