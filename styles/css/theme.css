@@ -383,4 +383,5 @@ div[class^=ui-badge-]{
 {
     font-family: Georgia, serif;
     color:gray;
+    font-style: 16px;
 }
