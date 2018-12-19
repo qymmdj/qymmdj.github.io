@@ -8,25 +8,17 @@ header: Posts By Category
   <div class="row">
     <div class="col-md-9" role="main">
       <div class="docs-content article">
-		  <h1 >机器学习</h1>
-		<div class="bs-callout bs-callout-danger">
-			<div class="article-desc">
-				<h4 >KNN临近算法描述</h4>
-				<p class="excerpt">knn 临近算法可用于计算什么呢？</p>
-			</div>
-		</div>
-		  <div class="bs-callout bs-callout-danger">
-			  <div class="article-desc">
-				  <h4 >KNN临近算法描述</h4>
-				  <p class="excerpt">knn 临近算法可用于计算什么呢？</p>
-			  </div>
-		  </div>
-		  <div class="bs-callout bs-callout-danger">
-			  <div class="article-desc">
-				  <h4 >KNN临近算法描述</h4>
-				  <p class="excerpt">knn 临近算法可用于计算什么呢？</p>
-			  </div>
-		  </div>
+		  {% for category in site.categories %}
+		  <h1 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h1>
+		 	 {% for pages_list in category.last %}
+				<div class="bs-callout bs-callout-danger">
+					<div class="article-desc">
+						<h4 ><a href="{{ pages_list.baseurl}}{{ pages_list.url }}">{{ pages_list.title }} {{ pages_list.date | date: "（%Y年%m月%d日）" }}</a></h4>
+						<p class="excerpt">{{ pages_list.excerpt | strip_html }}</p>
+					</div>
+				</div>
+			  {% endfor %}
+		  {% endfor %}
       </div>
     </div>
 	  <div class="col-md-3">
