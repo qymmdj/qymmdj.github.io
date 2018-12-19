@@ -398,7 +398,7 @@ div[class^=ui-badge-]{
     color: #aa6708;
 }
 
-.navigation h1{
+#navigation h1{
     color: #3071a9;
     padding: 10px 5px;
     text-shadow: 1px 1px #000 ;
