@@ -423,3 +423,11 @@ div[class^=ui-badge-]{
     font-weight: 400;
     word-break:break-all;
 }
+
+.post-content h1
+{
+    font-size:26px;
+}
+.post-header .post-title{
+    font-size:28px;
+}
