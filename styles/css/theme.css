@@ -417,3 +417,9 @@ div[class^=ui-badge-]{
 .nextpage ,.busuanzi{
     float: right;
 }
+.post-content{
+    line-height: 1.7;
+    font-size: 16px;
+    font-weight: 400;
+    word-break:break-all;
+}
