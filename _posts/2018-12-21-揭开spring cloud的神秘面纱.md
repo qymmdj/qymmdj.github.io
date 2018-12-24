@@ -12,7 +12,7 @@ tag: springcloud
 一：前言 	{#start}
 ====================
 
-这篇帖子中《揭开spring cloud的神秘面纱系列之一：对spring cloud的》中提到了今年非常热门的微服务开发框架SpringCloud，其中所涉及的技术springboot、springCloud，NetFlix OSS 微服务工具，由于是新技术，很多人对它们有很多误解，没有搞清楚他们的关系，而我们部分的微服务项目马上就要进入开发阶段，如果对springBoot没有一些基本认识和了解，就使用springCloud进行微服务开发，项目肯定会存在风险。这篇文章进一步对SpringBoot和SpringCloud进行更深一层分析，识别出问题和风险，然后设计一套易上手的开发框架，来提升编码效率，测试运维效率、版本发布和升级效率，来降低项目风险，缩短项目开发周期。
+今年非常热门的微服务开发框架SpringCloud，其中所涉及的技术springboot、springCloud，NetFlix OSS 微服务工具，由于是新技术，很多人对它们有很多误解，没有搞清楚他们的关系，而我们部分的微服务项目马上就要进入开发阶段，如果对springBoot没有一些基本认识和了解，就使用springCloud进行微服务开发，项目肯定会存在风险。这篇文章进一步对SpringBoot和SpringCloud进行更深一层分析，识别出问题和风险，然后设计一套易上手的开发框架，来提升编码效率，测试运维效率、版本发布和升级效率，来降低项目风险，缩短项目开发周期。
 
  二、Spring、SpringBoot、SpringCloud、Netflix OSS             	{#spring}
 =======================================
@@ -27,16 +27,13 @@ Netflix OSS(Netflix Open Source Software Center)，即Netflix公司开源的产�
 
   那么Spring、SpringBoot、SpringCloud都解决了什么问题，之间的关系是什么？ 先从一个实际项目开发步骤来分析下，假设我们要开发一个mvc web应用,经常会使用SSM框架(Spring+SpringMVC+MyBatis)，那么整合这个框架，可能需要经过以下步骤：
 
-
-
-
-1：需要一个spring主配置文件applicationContext.xml：配置事务，数据源、bean、拦截器
-2：一个springMvc配置文件，并配置SpringMvc的视图解析
-3：mybatis 自身配置文件，以及和spring 结合的spring配置文件，配置插件、mapper、数据获取方式等。
-4：如果不是通过maven管理，还需要下载spring和mybatis整合所需的jar包，还要关心版本。
-5：配置 web.xml
-6：一个web容器
-7：部署
+1. 需要一个spring主配置文件applicationContext.xml：配置事务，数据源、bean、拦截器
+2. 一个springMvc配置文件，并配置SpringMvc的视图解析
+3. mybatis 自身配置文件，以及和spring 结合的spring配置文件，配置插件、mapper、数据获取方式等。
+4. 如果不是通过maven管理，还需要下载spring和mybatis整合所需的jar包，还要关心版本。
+5. 配置 web.xml
+6. 一个web容器
+7. 部署
 从步骤可以到要构建一个产品级的应用，用spring来整合springMvc、mybatis框架，还是需要较多配置文件，配置的内容也会比较多，整合过程中会出现各种问题，需要花时间解决，相对比较麻烦、费时。spring设计的初衷就是不要重复造轮子，着眼于轻便、灵巧，易于开发、测试和部署的轻量级开发框架，然而随着spring的发展以及各种框架的层出不穷，spring整合这些框架会越来越复杂，逐渐背离初衷。
 这个时候Pivotal团队就设计了全新的框架springBoot，目的是解决spring集成（整合）各种框架越来越复杂的问题，通过少量的代码就能创建一个独立的、产品级别的Spring应用。
 
