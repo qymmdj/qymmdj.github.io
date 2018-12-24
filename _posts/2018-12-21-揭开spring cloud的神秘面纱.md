@@ -9,11 +9,13 @@ tag: springcloud
 * content
 {:toc}
 
-#### 一：前言 	{#start}
+一：前言 	{#start}
+====================
 
 这篇帖子中《揭开spring cloud的神秘面纱系列之一：对spring cloud的》中提到了今年非常热门的微服务开发框架SpringCloud，其中所涉及的技术springboot、springCloud，NetFlix OSS 微服务工具，由于是新技术，很多人对它们有很多误解，没有搞清楚他们的关系，而我们部分的微服务项目马上就要进入开发阶段，如果对springBoot没有一些基本认识和了解，就使用springCloud进行微服务开发，项目肯定会存在风险。这篇文章进一步对SpringBoot和SpringCloud进行更深一层分析，识别出问题和风险，然后设计一套易上手的开发框架，来提升编码效率，测试运维效率、版本发布和升级效率，来降低项目风险，缩短项目开发周期。
 
-####  二、Spring、SpringBoot、SpringCloud、Netflix OSS             	{#spring}
+ 二、Spring、SpringBoot、SpringCloud、Netflix OSS             	{#spring}
+=======================================
 
 研究他们之前，先得看下这些顶级开源项目背后支撑团队到底都是些什么样的组织。根据 Rod Johnson《Expert one on one J2EE design and development》书的思想 ， Rod Johnson开发了sprigFrameWork 并成立 interface21公司，08年改名 springSource，并且收购了 RabbitMQ，redis，主要提供咨询和培训服务。09年 Vmware 收购springSource ,13年Vmware和Emc合资成立 GoPivotal公司，简称Pivotal。打开spring 官网http://spring.io/，能看到下面图标
 
@@ -42,6 +44,7 @@ Netflix OSS(Netflix Open Source Software Center)，即Netflix公司开源的产�
 springBoot 并非重复造轮子，并不是说spring有缺点，就重新开发了一个框架来替代spring，spring框架本身还是非常优秀的：比喻它的开放式设计架构，才会使得基于spring框架扩展的框架非常多，任何框架都可以通过spring的开放式设计进行扩展。springBoot也正是利用spring的开放式设计，基于spring开发了springBoot，springBoot只是一个脚手架，用来快速集成第三方框架，做到开箱即用，无需或少量配置。
 如果是用springBoot整合SSM框架，那么以上7步一个都不需要，只需要配置一个连接池，然后在maven pom添加依赖，通过springBoot这个脚手架将各个组件黏合在一起，使其可以条不紊地运行，web容器也不需要了，因为已经内嵌了。通过以下main方法来启动应用，包括web容器一起启动：
 
+{% highlight java %}
 @SpringBootApplication(scanBasePackages = {"com.sitech"})
 public class App 
 {
@@ -50,5 +53,8 @@ public class App
             SpringApplication.run(App.class, args);
         }
 }
+{% endhighlight %}
+
+
 
 springCloud是什么？ 说白了就是利用springBoot集成第三方框架的便利性，使用springBoot开发框架将Netflix OSS 中微服务组件进行了集成，简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，但是Netflix OSS套件并没有业务功能服务开发框架，只是提供基础设施组件（和业务无关）。那么业务服务开发框架由谁提供，SpringBoot吗？当然不是，SpringBoot只是集成第三方框架，自己本身不重复造轮子，基本上基于springCloud的业务服务开发还是使用传统SpringMvc框架，但在SpringBoot 2.0集成了Spring5.0提供的WebFlux新的开发框架，业务服务开发框架算是有了第二选择，但是只能选其一。
